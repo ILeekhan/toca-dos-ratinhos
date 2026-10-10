@@ -3,26 +3,46 @@ Site de apoio às aulas de programação da professora. O projeto usa HTML, CSS 
 Estrutura
 
 site-professora/
+
 ├── dist/                         # Arquivos do front-end
+
 │   ├── index.html                # Apresentação pública do site
+
 │   ├── estudos.html              # Painel de estudos do aluno
+
 │   ├── login.html                # Login de aluno e administrador
+
 │   ├── cadastro.html             # Cadastro público de aluno
+
 │   ├── admin.html                # Painel administrativo
+
 │   ├── app.js                    # Busca, chatbot e contatos
+
 │   ├── login.js                  # Envio do login e redirecionamento por perfil
+
 │   ├── cadastro.js               # Envio do cadastro
+
 │   ├── admin.js                  # Verificações e ações da área admin
+
 │   ├── styles.css                # Estilos do painel de estudos
+
 │   ├── landing.css               # Estilos da página de apresentação
+
 │   └── imagens/                  # Imagens das aulas e dos ratinhos
+
 └── backend/                      # API, autenticação e banco de dados
-    ├── server.js                 # Servidor HTTP e rotas da API
-    ├── auth.js                   # Cadastro, login, sessão e usuários
-    ├── security.js               # Hash de senhas e tokens de sessão
-    ├── database.js               # Configuração e consultas SQLite
-    └── data/
-        └── cantinho.sqlite       # Banco local de usuários e sessões
+
+├── server.js                 # Servidor HTTP e rotas da API
+    
+  ├── auth.js                   # Cadastro, login, sessão e usuários
+    
+  ├── security.js               # Hash de senhas e tokens de sessão
+  
+  ├── database.js               # Configuração e consultas SQLite
+    
+  └── data/
+    
+  └── cantinho.sqlite       # Banco local de usuários e sessões
 
 A página inicial está sendo reorganizada: o painel que hoje está em index.html deve ser preservado como estudos.html; o novo index.html será a apresentação pública. Os arquivos devem ficar todos dentro de dist.
 
