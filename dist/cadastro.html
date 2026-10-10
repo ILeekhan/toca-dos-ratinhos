@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Criar conta | Toca dos Ratinhos</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="cadastro.js" defer></script>
+</head>
+
+<body class="pagina-cadastro">
+    <main class="container">
+        <a class="voltar" href="login.html">← Voltar ao login</a>
+        <h1>Criar conta de aluno</h1>
+        <p class="intro">Preencha os campos para fazer seu cadastro.</p>
+
+        <section class="quadro">
+            <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+            <form id="form-cadastro">
+                <label for="cadastro-usuario">Nome de usuário</label>
+                <input id="cadastro-usuario" name="username" minlength="2" maxlength="40" autocomplete="username"
+                    required>
+
+                <label for="cadastro-email">E-mail</label>
+                <input id="cadastro-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="cadastro-senha">Senha</label>
+                <input id="cadastro-senha" name="password" type="password" minlength="12" maxlength="128"
+                    autocomplete="new-password" required>
+                <small>A senha precisa ter pelo menos 12 caracteres.</small>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <p class="ajuda">Já tem conta? <a href="login.html">Entrar</a></p>
+        </section>
+    </main>
+</body>
+
+</html>

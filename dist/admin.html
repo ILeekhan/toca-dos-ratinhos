@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administração | Toca dos Ratinhos</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+</head>
+
+<body>
+    <header class="topo">
+        <a href="index.html">Toca dos Ratinhos</a>
+        <button id="botao-sair" type="button">Sair</button>
+    </header>
+
+    <main class="container">
+        <h1>Painel administrativo</h1>
+        <p id="status-admin" role="status">Verificando acesso...</p>
+
+        <section id="conteudo-admin" class="painel" hidden>
+            <div class="titulo-painel">
+                <div>
+                    <h2>Contas cadastradas</h2>
+                    <p>Lista de usuários do site.</p>
+                </div>
+                <button id="botao-atualizar" type="button">Atualizar lista</button>
+            </div>
+
+            <p id="mensagem-usuarios" role="status"></p>
+
+            <div class="tabela-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Usuário</th>
+                            <th>E-mail</th>
+                            <th>Perfil</th>
+                            <th>Cadastro</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-usuarios"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

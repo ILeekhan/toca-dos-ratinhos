@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 16px;
+    color: #34234b;
+    background: linear-gradient(135deg, #f7efff, #fff3f8);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.ajuda a {
+    color: #7044a5;
+    font-weight: 700;
+}
+
+.voltar {
+    color: #7044a5;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 28px 0 8px;
+    color: #583582;
+}
+
+.intro {
+    margin-top: 0;
+    color: #665b70;
+}
+
+.quadros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.quadro {
+    padding: 24px;
+    border: 1px solid #eadcf5;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px #56357812;
+}
+
+.quadro h2 {
+    margin-top: 0;
+    color: #7044a5;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8c9e5;
+    border-radius: 10px;
+    font: inherit;
+}
+
+button {
+    margin-top: 12px;
+    padding: 12px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background: #774ba8;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #60388d;
+}
+
+small {
+    color: #665b70;
+}
+
+.mensagem {
+    min-height: 24px;
+    font-weight: 600;
+}
+
+.mensagem.erro {
+    color: #a3264d;
+}
+
+.mensagem.sucesso {
+    color: #28734b;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+body.pagina-login::before,
+body.pagina-cadastro::before {
+    content: "";
+    position: fixed;
+    z-index: 0;
+    bottom: 4vh;
+    width: min(34vw, 620px);
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+
+body.pagina-login::before {
+    left: 2vw;
+    background-image: url("ratinhos-login.png");
+    background-position: left bottom;
+}
+
+body.pagina-cadastro::before {
+    right: 2vw;
+    background-image: url("ratinhos-cadastro.png");
+    background-position: right bottom;
+}
+
+@media (max-width: 900px) {
+
+    body.pagina-login::before,
+    body.pagina-cadastro::before {
+        display: none;
+    }
+}

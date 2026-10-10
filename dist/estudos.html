@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f4ff">
+  <meta name="description" content="Aulas acolhedoras de programação, Linux e segurança digital.">
+  <title>Toca da Ming | Aprenda tecnologia no seu ritmo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="site-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Cantinho do Código, início"><span class="brand-heart"
+          aria-hidden="true">♥</span></a>
+      <nav class="side-nav" aria-label="Menu do site">
+        <a class="nav-link active" href="#inicio"><span aria-hidden="true">⌂</span>Início</a>
+        <a class="nav-link" href="#todas-aulas"><span aria-hidden="true">▤</span>Aulas</a>
+        <a class="nav-link" href="#seguranca"><span aria-hidden="true">♧</span>Hacking Ético</a>
+        <a class="nav-link" href="#materiais"><span aria-hidden="true">♧</span>Loja e PDFs</a>
+        <a class="nav-link" href="#contato"><span aria-hidden="true">✉</span>Meu contato</a>
+      </nav>
+      <div class="nav-divider"></div>
+      <nav class="side-nav secondary-nav" aria-label="Área do aluno">
+        <button class="nav-link" type="button" data-action="student-area"><span aria-hidden="true">♙</span>Meu
+          perfil</button>
+        <a class="nav-link" href="#contato"><span aria-hidden="true">⚙</span>Configurações</a>
+        <button class="nav-link" type="button" data-chat-open><span aria-hidden="true">ⓘ</span>Ajuda</button>
+      </nav>
+      <div class="sidebar-mascot"><img src="ratinha-lateral.webp" alt="Ratinha sentada sobre livros usando um notebook"
+          width="227" height="239" loading="lazy"></div>
+      <div class="sidebar-note"><span aria-hidden="true">♧</span>
+        <p>Tecnologia também é para você!</p>
+      </div>
+    </aside>
+
+    <main id="conteudo" class="main-content">
+      <header class="topbar">
+        <form class="search-box" role="search" id="search-form"><span aria-hidden="true">⌕</span><label
+            class="visually-hidden" for="course-search">Buscar aulas e conteúdos</label><input id="course-search"
+            type="search" placeholder="Buscar aulas, materiais ou temas..." autocomplete="off"><kbd>/</kbd></form>
+        <div class="topbar-actions">
+          <button class="icon-button notification-button" type="button" aria-label="Notificações">♧<i
+              aria-hidden="true"></i></button>
+          <span class="topbar-divider" aria-hidden="true"></span>
+          <button class="account-button" type="button" data-action="student-area"><img class="teacher-avatar"
+              src="professora-avatar.webp" alt="Professora" width="50" height="55"><span><strong>Olá,
+                professora!</strong></span><span aria-hidden="true">⌄</span></button>
+          <button class="mobile-menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+      </header>
+
+      <div class="dashboard-columns">
+        <div class="primary-column">
+          <section id="inicio" class="hero">
+            <div class="hero-copy">
+              <h1>Olá,Aluno!</h1>
+              <h2>Aprenda tecnologia no seu ritmo</h2>
+              <p>Aulas, projetos e materiais para você evoluir na programação e na segurança digital.</p>
+              <a class="button button-primary" href="#aulas-destaque">Continuar aprendendo <span
+                  aria-hidden="true">→</span></a>
+            </div>
+            <div class="hero-art"><span class="hero-heart" aria-hidden="true">♥</span><img
+                src="ratinha-programando.webp" alt="Ratinha fofa estudando programação com notebook e livros"
+                width="720" height="600" fetchpriority="high"><span class="hero-caption">Pequenos passos<br>também
+                constroem<br>grandes conquistas <b>♡</b></span></div>
+          </section>
+
+          <section id="aulas-destaque" class="featured-section">
+            <div class="section-heading">
+              <h2><span class="heading-star" aria-hidden="true">★</span>Aulas em destaque</h2><a href="#todas-aulas"
+                class="text-link">Ver todas <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="featured-grid" id="course-grid">
+              <a class="course-card featured-course" href="#python-aula"
+                data-searchable="Python programação iniciante fundamentos"><img class="course-cover"
+                  src="capa-python.webp" alt="Ratinha estudando Python em um notebook" width="256" height="117">
+                <div class="course-copy">
+                  <h3>Python</h3>
+                  <p>Do zero ao primeiro projeto com uma linguagem versátil e muito usada no mercado.</p><span
+                    class="card-link">Ver aulas <b aria-hidden="true">→</b></span>
+                </div>
+              </a>
+              <a class="course-card featured-course" href="#contato"
+                data-searchable="JavaScript JS web programação"><img class="course-cover" src="capa-javascript.webp"
+                  alt="Ratinha estudando JavaScript em um notebook" width="253" height="117">
+                <div class="course-copy">
+                  <h3>JavaScript</h3>
+                  <p>Crie sites interativos e dê vida às suas ideias na web.</p><span class="card-link">Ver aulas <b
+                      aria-hidden="true">→</b></span>
+                </div>
+              </a>
+              <a class="course-card featured-course" href="#linux-aula"
+                data-searchable="Linux Kali Linux segurança cibersegurança"><span class="course-cover-wrap"><img
+                    class="course-cover" src="capa-linux-kali.webp"
+                    alt="Ratinha com capuz estudando Linux e segurança digital" width="255" height="117">
+                  <div class="course-copy">
+                    <h3>Linux e Kali Linux</h3>
+                    <p>Explore o sistema Linux e aprenda ferramentas para testes de segurança autorizados.</p><span
+                      class="card-link">Ver aulas <b aria-hidden="true">→</b></span>
+                  </div>
+              </a>
+            </div>
+          </section>
+
+          <section id="seguranca" class="security-section">
+            <div class="section-heading">
+              <h2><span class="heading-document" aria-hidden="true">▤</span>Conteúdos de segurança digital</h2><a
+                href="#conteudos-seguranca" class="text-link">Ver todos <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="security-grid" id="conteudos-seguranca">
+              <article class="security-card tone-lilac"><span class="security-icon">✓</span>
+                <div>
+                  <h3>Boas práticas na internet</h3><small>PDF introdutório</small>
+                </div>
+              </article>
+              <article class="security-card tone-pink"><span class="security-icon">▣</span>
+                <div>
+                  <h3>Guia de segurança digital</h3><small>Guia para iniciantes</small>
+                </div>
+              </article>
+              <article class="security-card tone-blue"><span class="security-icon">◎</span>
+                <div>
+                  <h3>Privacidade e dados pessoais</h3><small>Leitura rápida</small>
+                </div>
+              </article>
+              <article class="security-card tone-green"><span class="security-icon">♧</span>
+                <div>
+                  <h3>Ferramentas úteis para o dia a dia</h3><small>Conteúdo educativo</small>
+                </div>
+              </article>
+            </div>
+            <p class="security-disclaimer">Conteúdo informativo. Testes práticos devem acontecer apenas em ambientes
+              próprios ou autorizados.</p>
+          </section>
+
+          <section id="todas-aulas" class="all-courses-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">TODAS AS TRILHAS</p>
+                <h2>Escolha por onde começar</h2>
+              </div>
+            </div>
+            <div class="all-course-grid" id="all-course-grid">
+              <a class="course-card course-list-card" href="#c-aula"
+                data-searchable="C linguagem programação fundamentos"><span
+                  class="course-symbol symbol-c">C</span><span>
+                  <h3>Linguagem C</h3>
+                  <p>Lógica, variáveis e fundamentos da programação.</p>
+                </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#csharp-aula"
+                data-searchable="C# C sharp programação dotnet"><span
+                  class="course-symbol symbol-csharp">C#</span><span>
+                  <h3>C#</h3>
+                  <p>Crie programas com uma linguagem versátil.</p>
+                </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#cpp-aula"
+                data-searchable="C++ cpp programação">C++</span><span>
+                  <h3>C++</h3>
+                  <p>Explore conceitos e aplicações de alto desempenho.</p>
+                </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#contato"
+                data-searchable="Python programação iniciante"><span class="course-symbol symbol-python">Py</span><span>
+                  <h3>Python</h3>
+                  <p>Pratique com uma sintaxe clara e projetos didáticos.</p>
+                </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#javascript-aula"
+                data-searchable="JavaScript JS web programação"><span class="course-cover-wrap"><span
+                    class="course-symbol symbol-js">JS</span><span>
+                    <h3>JavaScript</h3>
+                    <p>Adicione interatividade a páginas da web.</p>
+                  </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#typescript-aula"
+                data-searchable="TypeScript TS javascript tipagem"><span class="course-symbol symbol-ts">TS</span><span>
+                  <h3>TypeScript</h3>
+                  <p>Organize aplicações JavaScript com tipos.</p>
+                </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#linux-aula"
+                data-searchable="Linux sistema operacional terminal"><span
+                  class="course-symbol symbol-linux">⌘</span><span>
+                  <h3>Linux</h3>
+                  <p>Conheça o sistema e pratique no terminal.</p>
+                </span><b aria-hidden="true">→</b></a>
+              <a class="course-card course-list-card" href="#contato"
+                data-searchable="Kali Linux segurança cibersegurança"><span
+                  class="course-symbol symbol-kali">K</span><span>
+                  <h3>Kali Linux</h3>
+                  <p>Ferramentas para estudos em laboratório autorizado.</p>
+                </span><b aria-hidden="true">→</b></a>
+            </div>
+            <p class="empty-search" id="empty-search" hidden>Nenhuma aula encontrada. Tente outro termo.</p>
+          </section>
+        </div>
+
+        <aside class="right-column" aria-label="Painel da professora">
+          <section class="progress-card panel-card">
+            <div class="panel-title"><span class="panel-icon icon-sprout">✦</span>
+              <h2>Seu progresso</h2><a href="#todas-aulas" aria-label="Ver aulas">›</a>
+            </div>
+            <div class="progress-content">
+              <div class="progress-ring"><span>0%</span></div>
+              <div>
+                <h3>Comece agora!</h3>
+                <p>Escolha uma aula para iniciar sua jornada.</p>
+              </div>
+            </div>
+          </section>
+          <section class="agenda-card panel-card">
+            <div class="panel-title"><span class="panel-icon icon-calendar">▦</span>
+              <h2>Sua agenda</h2><a href="#todas-aulas" class="agenda-link">Ver aulas ›</a>
+            </div>
+            <div class="agenda-row"><span class="agenda-number agenda-pink">01<small>PASSO</small></span>
+              <div>
+                <h3>Lógica de programação</h3>
+                <p>Fundamentos · Para começar</p>
+              </div>
+            </div>
+            <div class="agenda-row"><span class="agenda-number agenda-lilac">02<small>PASSO</small></span>
+              <div>
+                <h3>Projeto prático</h3>
+                <p>Python · Aprenda fazendo</p>
+              </div>
+            </div>
+            <div class="agenda-row"><span class="agenda-number agenda-pink">03<small>PASSO</small></span>
+              <div>
+                <h3>Segurança digital</h3>
+                <p>Estudo ético · Iniciantes</p>
+              </div>
+            </div>
+          </section>
+          <section class="help-card panel-card">
+            <div class="help-heading"><span class="chat-icon" aria-hidden="true">•••</span>
+              <div>
+                <h2>Precisa de ajuda?</h2>
+                <p>Tire suas dúvidas sobre cursos e materiais.</p>
+              </div><button type="button" data-chat-open aria-label="Abrir assistente">−</button>
+            </div><img class="help-mascot" src="ratinha-notebook.webp" alt="Ratinha fofa usando um notebook" width="360"
+              height="360" loading="lazy"><button class="contact-button whatsapp-button" type="button"
+              data-contact="whatsapp"><span aria-hidden="true">◉</span>Fale comigo no WhatsApp <b
+                aria-hidden="true">→</b></button><button class="contact-button instagram-button" type="button"
+              data-contact="instagram"><span aria-hidden="true">◎</span>Fale comigo no Instagram <b
+                aria-hidden="true">→</b></button>
+          </section>
+        </aside>
+      </div>
+
+      <section id="materiais" class="materials-section">
+        <div>
+          <p class="eyebrow">PARA ESTUDAR COM CALMA</p>
+          <h2>Loja e PDFs</h2>
+          <p>Materiais digitais da professora para apoiar seus estudos. O catálogo e as opções de compra serão
+            adicionados aqui.</p><a class="button button-primary" href="#contato">Ver materiais <span
+              aria-hidden="true">→</span></a>
+        </div>
+        <div class="pdf-art" aria-hidden="true"><span>PDF</span><b>✿</b></div>
+      </section>
+      <section id="python-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE PROGRAMAÇÃO</p>
+            <h2>Python do zero</h2>
+          </div>
+        </div>
+        <p>Uma trilha para aprender programação passo a passo e criar seu primeiro projeto.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Lógica e primeiros comandos</h3><small>Entenda como dar instruções ao computador.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Variáveis e decisões</h3><small>Guarde informações e use condicionais.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Repetições e listas</h3><small>Automatize tarefas e organize dados.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Funções e projeto</h3><small>Junte os conceitos em um exercício guiado.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="javascript-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE DESENVOLVIMENTO WEB</p>
+            <h2>JavaScript do zero</h2>
+          </div>
+        </div>
+        <p>Aprenda a criar páginas interativas e dar vida às suas ideias na web.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Variáveis e dados</h3><small>Conheça os primeiros comandos e tipos de dados.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Condições e repetições</h3><small>Crie regras e automatize instruções.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Funções e listas</h3><small>Organize e reutilize seu código.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Interação com a página</h3><small>Faça um projeto simples usando elementos HTML.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="linux-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE SISTEMAS E SEGURANÇA</p>
+            <h2>Linux e Kali Linux</h2>
+          </div>
+        </div>
+        <p>Conheça o terminal Linux e aprenda fundamentos de segurança em ambientes de estudo autorizados.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Sistema e arquivos</h3><small>Conheça pastas, arquivos e navegação no Linux.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Terminal e comandos</h3><small>Pratique comandos básicos e organização de arquivos.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Permissões e usuários</h3><small>Entenda acessos e boas práticas no sistema.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Segurança em laboratório</h3><small>Aprenda conceitos usando apenas ambientes próprios ou
+                autorizados.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="c-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE PROGRAMAÇÃO</p>
+            <h2>Fundamentos da linguagem C</h2>
+          </div>
+        </div>
+        <p>Aprenda os conceitos básicos de programação e pratique criando seus primeiros programas.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Estrutura do programa</h3><small>Entenda como um programa em C é organizado.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Variáveis e decisões</h3><small>Armazene dados e use condições.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Repetições e funções</h3><small>Repita tarefas e organize instruções.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Primeiros exercícios</h3><small>Pratique os conceitos em pequenos programas.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="csharp-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE PROGRAMAÇÃO</p>
+            <h2>Primeiros passos com C#</h2>
+          </div>
+        </div>
+        <p>Aprenda a criar programas com C# e conheça conceitos usados no ecossistema .NET.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Variáveis e tipos</h3><small>Guarde e trabalhe com diferentes tipos de informação.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Condições e repetições</h3><small>Crie regras e controle o fluxo do programa.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Métodos e organização</h3><small>Separe o programa em partes reutilizáveis.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Projeto inicial</h3><small>Junte os conceitos em um programa simples.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="cpp-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE PROGRAMAÇÃO</p>
+            <h2>Introdução ao C++</h2>
+          </div>
+        </div>
+        <p>Conheça os fundamentos do C++ e pratique criando programas passo a passo.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Estrutura e variáveis</h3><small>Entenda como iniciar um programa e guardar dados.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Condições e repetições</h3><small>Crie decisões e repita instruções.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Funções e coleções</h3><small>Organize o código e trabalhe com conjuntos de dados.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Exercícios práticos</h3><small>Use os conceitos para resolver problemas simples.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="typescript-aula" class="security-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TRILHA DE DESENVOLVIMENTO WEB</p>
+            <h2>Introdução ao TypeScript</h2>
+          </div>
+        </div>
+        <p>Aprenda como o TypeScript acrescenta tipos ao JavaScript e ajuda a organizar projetos.</p>
+        <div class="security-grid">
+          <article class="security-card tone-lilac"><span class="security-icon">01</span>
+            <div>
+              <h3>Tipos básicos</h3><small>Conheça tipos para textos, números e valores lógicos.</small>
+            </div>
+          </article>
+          <article class="security-card tone-pink"><span class="security-icon">02</span>
+            <div>
+              <h3>Funções tipadas</h3><small>Defina os dados que as funções recebem e retornam.</small>
+            </div>
+          </article>
+          <article class="security-card tone-blue"><span class="security-icon">03</span>
+            <div>
+              <h3>Objetos e interfaces</h3><small>Organize os formatos de dados do seu projeto.</small>
+            </div>
+          </article>
+          <article class="security-card tone-green"><span class="security-icon">04</span>
+            <div>
+              <h3>Projeto inicial</h3><small>Pratique usando TypeScript em um exemplo simples.</small>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="contato" class="contact-section">
+        <div>
+          <p class="eyebrow">VAMOS CONVERSAR?</p>
+          <h2>Meu contato</h2>
+          <p>Escolha um canal para falar com a professora. Ela responderá assim que possível.</p>
+        </div>
+        <div class="contact-cards"><button class="contact-card" type="button"
+            data-contact="whatsapp"><strong>WhatsApp</strong><span>Adicionar número da
+              professora</span>↗</button><button class="contact-card" type="button"
+            data-contact="instagram"><strong>Instagram</strong><span>https://www.instagram.com/miingrrr/</span>↗</button><button
+            class="contact-card" type="button" data-contact="email"><strong>E-mail</strong><span>Adicionar e-mail da
+              professora</span>↗</button></div>
+      </section>
+      <footer class="site-footer"><a href="#inicio">♥ Cantinho do Código</a><span>Feito com carinho para aprender
+          tecnologia. ♡</span><a href="#inicio">Voltar ao início ↑</a></footer>
+    </main>
+  </div>
+
+  <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Abrir assistente de ajuda"
+    aria-expanded="false"><span aria-hidden="true">✿</span><span class="chat-launcher-text">Ajuda</span><span
+      class="chat-dot" aria-hidden="true"></span></button>
+  <section class="chat-panel" id="chat-panel" aria-label="Assistente de ajuda" hidden>
+    <header class="chat-header"><img class="chat-avatar" src="ratinha-livro.webp" alt="" aria-hidden="true" width="300"
+        height="300">
+      <div><strong>Assistente do Cantinho</strong><small><span></span>Pronta para ajudar</small></div><button
+        id="chat-close" type="button" aria-label="Fechar assistente">×</button>
+    </header>
+    <div class="chat-messages" id="chat-messages" aria-live="polite">
+      <p class="bot-message">Oi! Posso explicar as aulas, os materiais ou ajudar você a encontrar os contatos da
+        professora. 🌷</p>
+    </div>
+    <div class="chat-quick-actions"><button type="button" data-question="aulas">Quais são as aulas?</button><button
+        type="button" data-question="materiais">Como funcionam os PDFs?</button><button type="button"
+        data-question="contato">Quero entrar em contato</button></div>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="account-dialog" class="account-dialog"><button class="dialog-close" type="button"
+      aria-label="Fechar">×</button><span class="dialog-flower" aria-hidden="true">✿</span>
+    <p class="eyebrow">ÁREA DO ALUNO</p>
+    <h2>Seu espaço está sendo preparado.</h2>
+    <p>O cadastro e o login serão ativados junto com a área segura de materiais e compras. Por enquanto, explore as
+      aulas e fale com a professora.</p><button class="button button-primary dialog-ok" type="button">Entendi</button>
+  </dialog>
+</body>
+
+</html>
