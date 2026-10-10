@@ -1,6 +1,7 @@
 Toca dos Ratinhos
 Site de apoio às aulas de programação da professora. O projeto usa HTML, CSS e JavaScript no front-end e Node.js com SQLite no back-end, mantendo a estrutura simples e leve.
 Estrutura
+
 site-professora/
 ├── dist/                         # Arquivos do front-end
 │   ├── index.html                # Apresentação pública do site
@@ -22,41 +23,39 @@ site-professora/
     ├── database.js               # Configuração e consultas SQLite
     └── data/
         └── cantinho.sqlite       # Banco local de usuários e sessões
+
 A página inicial está sendo reorganizada: o painel que hoje está em index.html deve ser preservado como estudos.html; o novo index.html será a apresentação pública. Os arquivos devem ficar todos dentro de dist.
 
 Requisitos
 - Node.js instalado para iniciar o back-end.
 - Python instalado para servir os arquivos estáticos do front-end com http.server.
 - O SQLite é usado pelo back-end para armazenar contas e sessões.
+
 Como executar no Windows PowerShell
 Abra dois terminais no VS Code e mantenha ambos abertos.
 Terminal 1 — back-end
+
 cd "$HOME\Desktop\Programação\Site_Ming\site-professora\backend"
 node .\server.js
+
 O servidor deve informar que está rodando em http://127.0.0.1:3333.
+
 Terminal 2 — front-end
+
 cd "$HOME\Desktop\Programação\Site_Ming\site-professora\dist"
 py -m http.server 4173
+
 Abra no navegador:
 - Site: http://127.0.0.1:4173
 - Verificação da API: http://127.0.0.1:3333/api/health
+- 
 Fluxo de acesso
 1. index.html apresenta o site e oferece os links de login e cadastro.
 2. Contas criadas pelo cadastro público recebem o perfil aluno.
 3. Depois de autenticar, alunos devem ir para estudos.html.
 4. Contas com perfil admin devem ir para admin.html.
 5. O servidor verifica a sessão e exige perfil admin nas rotas administrativas.
-O redirecionamento após o cadastro depende da versão atualizada de server.js, que cria a sessão junto com a conta. Depois de aplicar a alteração, teste o cadastro em uma conta de teste antes de usar a conta principal.
-Rotas da API
-Método	Rota	Uso
-GET	/api/health	Verificar se o servidor está ativo
-GET	/api/cursos	Listar cursos
-POST	/api/auth/register	Criar conta de aluno
-POST	/api/auth/login	Entrar
-POST	/api/auth/logout	Encerrar sessão
-GET	/api/auth/me	Consultar a conta da sessão atual
-GET	/api/admin/users	Listar usuários para um administrador autenticado
-
+O redirecionamento após o cadastro depende da versão atualizada de server.js, que cria a sessão junto com a conta. Depois de aplicar a alteração, teste o cadastro em uma conta de teste antes de usar a conta principal
 
 Segurança implementada e revisão pendente
 - O cadastro público define o perfil como aluno; ele não recebe um perfil administrativo enviado pelo formulário.
