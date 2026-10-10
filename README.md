@@ -181,5 +181,5 @@ A revisão de segurança **ainda não está concluída**. É necessário:
 <div align="center">
 
 Feito com 🧀 por alunos e professora — **Toca dos Ratinhos** 🐭
-
+Feito Por Leekhan.
 </div>
